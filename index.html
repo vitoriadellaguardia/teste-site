@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,6 +10,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Àquila Filipe</title>
+    <style>
+        .carousel-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+        .carousel-item {
+            scroll-snap-align: start;
+        }
+    </style>
 </head>
 <body class="bg-pink-500 h-screen font-poppins">
     
@@ -17,7 +29,7 @@
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <div class="logo">
                 <a href="">
-                    <img src="imgs/aquilalogo.jpg" alt="logo aquila" class="w-64 block">
+                    <img src="imgs/aquila.jpg" alt="logo aquila" class="w-20 rounded-full">
                 </a>
             </div> 
 
@@ -40,5 +52,42 @@
         </div>
     </header>
 
+    <section id="apresentacao" class="bg-amber-400 py-20 px-9 flex flex-col md:flex-row items-center justify-between relative">
+        <div class="flex-shrink-0 mb-8 md:mb-0 md:mr-16">
+            <h1 class="font-extrabold text-5xl md:text-8xl leading-tight">
+                Oi, eu sou o <br> Áquila Filipe.
+            </h1>
+        </div>
+
+        <div class="relative w-full md:w-[60%] flex-1 h-[60vh]">
+            <div id="carousel" class="carousel-container flex overflow-x-scroll snap-x snap-mandatory scroll-smooth h-full">
+                <div class="carousel-item flex-shrink-0 w-full h-full">
+                    <img src="imgs/dormindo.jpg" alt="Foto do Áquila 1" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-item flex-shrink-0 w-full h-full">
+                    <img src="imgs/bola.jpg" alt="Foto do Áquila 2" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-item flex-shrink-0 w-full h-full">
+                    <img src="imgs/praia.jpg" alt="Foto do Áquila 3" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-item flex-shrink-0 w-full h-full">
+                    <img src="imgs/IMG_0465.JPEG" alt="Foto do Áquila 4" class="w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/70 text-black hover:bg-white shadow-md transition-colors z-10 hidden md:block">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <section id="fotos-secundarias"> 
+        <div class="bg-blue-300 min-h-screen px-9 flex items-center justify-between">
+        </div>
+    </section>
+
+    <script src="index.js"></script>
 </body>
 </html>
