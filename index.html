@@ -21,6 +21,20 @@
         .carousel-item {
             scroll-snap-align: start;
         }
+
+        .typewriter-text {
+            display: inline-block;
+        }
+        .cursor {
+            display: inline-block;
+            background-color: #000;
+            width: 3px;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
     </style>
 </head>
 <body class="bg-pink-500 h-screen font-poppins">
@@ -55,7 +69,7 @@
     <section id="apresentacao" class="bg-amber-400 py-20 px-9 flex flex-col md:flex-row items-center justify-between relative">
         <div class="flex-shrink-0 mb-8 md:mb-0 md:mr-16">
             <h1 class="font-extrabold text-5xl md:text-8xl leading-tight">
-                Oi, eu sou o <br> Áquila Filipe.
+                <span id="typewriter-text" class="typewriter-text"></span>
             </h1>
         </div>
 
@@ -75,8 +89,8 @@
                 </div>
             </div>
             
-            <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/70 text-black hover:bg-white shadow-md transition-colors z-10 hidden md:block">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+            <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/70 text-black hover:bg-white shadow-md transition-colors z-10 hidden md:block">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
             </button>
@@ -88,6 +102,7 @@
         </div>
     </section>
 
+    <script src="typewriter.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
